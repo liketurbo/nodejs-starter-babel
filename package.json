@@ -23,7 +23,7 @@
     "start": "yarn build && node dist",
     "build": "babel src/index.js --out-dir dist",
     "dev": "nodemon --exec babel-node src/index",
-    "lint": "eslint . --ext .js --quiet --fix"
+    "lint": "eslint . --ext .js,.json,.md --quiet --fix"
   },
   "husky": {
     "hooks": {
@@ -31,7 +31,7 @@
     }
   },
   "lint-staged": {
-    "*.{js}": [
+    "*.{js,json,md}": [
       "prettier --write",
       "eslint --fix",
       "git add"

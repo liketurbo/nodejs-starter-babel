@@ -12,7 +12,6 @@
     "eslint": "6.7.2",
     "eslint-config-get-off-my-lawn": "5.0.1",
     "eslint-config-prettier": "6.7.0",
-    "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-simple-import-sort": "5.0.0",
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
@@ -23,7 +22,7 @@
     "start": "yarn build && node dist",
     "build": "babel src/index.js --out-dir dist",
     "dev": "nodemon --exec babel-node src/index",
-    "lint": "eslint . --ext .js,.json,.md --quiet --fix"
+    "lint": "eslint . --ext .js,.json --quiet --fix"
   },
   "husky": {
     "hooks": {
@@ -31,14 +30,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,md}": [
+    "*.{js,json}": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "*.{md}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "dependencies": {

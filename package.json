@@ -15,7 +15,7 @@
     "eslint-plugin-simple-import-sort": "5.0.0",
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
-    "nodemon": "2.0.2",
+    "nodemon": "2.0.4",
     "prettier": "1.19.1"
   },
   "scripts": {
